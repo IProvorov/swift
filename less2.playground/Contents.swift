@@ -25,6 +25,18 @@ var boolean1: Bool = true;
 
 var string : String = "str"
 
+// homework on 17.01
+
+let firstInt = 5
+var secontInt = 6
+var thirdInt = firstInt + secontInt
+thirdInt = firstInt * secontInt
+var variableDouble = 4.5
+var result = firstInt == secontInt
+var variableStr = "any value"
+
+
+
 
 
 
