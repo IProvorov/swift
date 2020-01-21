@@ -177,13 +177,13 @@ var amountInt = firstVariableInt + secondVariableInt + thirdVariableInt
 print(amountInt)
 
 if(firstVariableInt == secondVariableInt ) {
-    firstVariableInt * 5
+    firstVariableInt += 5
 } else if (secondVariableInt > thirdVariableInt ) {
-    secondVariableInt * 5
+    secondVariableInt += 5
 } else {
-    firstVariableInt * 5
-    secondVariableInt * 5
-    thirdVariableInt * 5
+    firstVariableInt += 5
+    secondVariableInt += 5
+    thirdVariableInt += 5
 }
     
 func functionСomparison() {
@@ -234,3 +234,144 @@ print("empty")
 //8) b
 //9) c
 //10) c
+
+
+
+///lesson 4
+
+//Collection
+var intArray1 : Array<Int> = []
+var intArray2 = Array <Int> ()
+var intArray : [Int] = []
+//[:] - dictionary
+
+
+let contsArray = [1,2,4,6,10]
+var varArray = [1,2,4,6,10]
+
+var item = contsArray[3]
+let count = contsArray.count
+var nextElement  = contsArray[count-1]
+contsArray.first
+contsArray.last
+
+varArray[1] = 0
+//varArray.map(<#T##transform: (Int) throws -> T##(Int) throws -> T#>)
+//varArray.sort()
+//varArray.sorted()
+
+var newArray = [1,2,4]
+newArray[0] = 1
+newArray[1] = 100
+print(newArray)
+newArray.append(1)
+newArray.append(2)
+newArray.insert(3, at:4)
+newArray.remove(at: 4)
+newArray.removeAll()
+
+
+for item in contsArray {
+    
+}
+contsArray.forEach { (item) in
+    print(item)
+}
+
+
+//Dict
+
+let constDict: Dictionary<String,Int> = [:]
+var carProperties = ["color": 123,"doors":4,"type":1]
+var car = [String: Int]()
+var dictItem = carProperties["color"]
+
+
+carProperties.forEach { (key,value) in
+    print(value)
+}
+
+carProperties.count
+carProperties["maxSpeed"] = 1000
+carProperties.removeAll()
+carProperties.removeValue(forKey:"maxSpeed")
+
+var tuple = (doble: 1.4,int: 2, str: "string", 4)
+var tupleItem1 = tuple.0
+var tupleItem2 = tuple.str
+
+typealias MyCustomTuple = (doble:Double ,int:Int, str:String)
+
+var customTuple : MyCustomTuple
+customTuple.int = 1
+
+// Set
+
+var customSet: Set<Int> = [1, 2, 4, 5]
+customSet.count
+customSet.isEmpty
+
+var subSet: Set<Int> = [2,3,5]
+var isSubSet = subSet.isSubset(of: customSet)
+subSet.intersection(customSet)
+
+customSet.remove(10)
+
+/// Closures
+func funcName (param:Int,param2:Double) -> Int {
+    return Int(param2)
+    
+}
+var variableInt = funcName(param: 1, param2: 2.1)
+
+//func color (_ red: Int? , _ green: Int?, _ blue: Int?) -> Int? {
+//    guard let red = red,
+//        let green = green,
+//        let blue = blue else {
+//            return 0
+//    }
+//
+//return red + green + blue
+//}
+//color ()
+
+func shotrAction() {
+    func hiddeFunc () {
+
+    }
+}
+
+struct CustomStructr  {
+  func shortAction() {
+        
+    }
+    
+    static func internalFunc() {
+        
+    }
+    
+}
+
+var customStr  = CustomStructr ()
+customStr.shortAction()
+CustomStructr().shortAction
+CustomStructr.internalFunc
+
+import UIKit
+
+var color = UIColor (white: 33, alpha: 0.5)
+
+var customClosures:(Int,Double,String) -> Void = {intex,doubleex,str in
+    print(intex)
+    print(intex)
+    print(str)
+}
+
+var newClosures = customClosures
+newClosures (1, 2.1, "sdsd")
+
+//typealias MyClosure = (Int,String) -> Void
+//var oneMore : MyClosure {
+//    $0
+//    $1
+//}
