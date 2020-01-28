@@ -99,3 +99,20 @@ return number1 + number2
 }
 addTwoNumbers(number1: 8, number2: 2)
 
+
+
+func sum(from: Int, to: Int, f: (Int) -> (Int)) -> Int {
+    var sum = 0
+    for i in from...to {
+        sum += f(i)
+    }
+    return sum
+}
+
+sum(from: 1, to: 10) {
+    $0
+} // the sum of the first 10 numbers
+
+sum(from: 1, to: 10) {
+    $0 * $0
+} // the sum of
